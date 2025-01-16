@@ -24,12 +24,12 @@ To run this project locally, follow these steps:
    cd image-to-svg-converter
    ```
 
-2. Install dependencies:
+1. Install dependencies:
    ```sh
    npm install
    ```
 
-3. Start the development server:
+2. Start the development server:
    ```sh
    npm start
    ```
