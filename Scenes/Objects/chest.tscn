@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0ye6ppn8gkyf"]
+
+[ext_resource type="Texture2D" uid="uid://dua278cl8opm8" path="res://Scenes/Objects/New Piskel-1.png (1) (1).png" id="1_nh0fs"]
+[ext_resource type="PackedScene" uid="uid://wn2tfo2th3ss" path="res://Scenes/InteractArea.tscn" id="2_k7g27"]
+[ext_resource type="Script" path="res://Scenes/Objects/chest.gd" id="3_enfoe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbgdk"]
+size = Vector2(16, 16)
+
+[node name="Sauce" type="StaticBody2D"]
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hbgdk")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(1.52588e-05, -0.999992)
+scale = Vector2(0.0119792, 0.0119792)
+texture = ExtResource("1_nh0fs")
+
+[node name="InteractArea" parent="." instance=ExtResource("2_k7g27")]
+scale = Vector2(7.54262, 7.47253)
+script = ExtResource("3_enfoe")

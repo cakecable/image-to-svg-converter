@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbdfc10qjav02"]
+
+[ext_resource type="PackedScene" uid="uid://dbcv1lvs4wld" path="res://Scenes/Objects/fruits.tscn" id="1_w8hx7"]
+[ext_resource type="Texture2D" uid="uid://ckfde7lit2ryc" path="res://Assets/halfSauce.png" id="2_f4ylb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e7jfj"]
+resource_local_to_scene = true
+size = Vector2(8, 13)
+
+[node name="Apple" instance=ExtResource("1_w8hx7")]
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_e7jfj")
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(5.96046e-08, -5.96046e-08)
+scale = Vector2(0.0234537, 0.0234537)
+texture = ExtResource("2_f4ylb")
+
+[node name="InteractArea" parent="." index="2"]
+scale = Vector2(1.69743, 1.74949)
+interact_label = "apple"
+interaction_variable = "num_apple"

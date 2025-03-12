@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkghcwgejf4y6"]
+
+[ext_resource type="PackedScene" uid="uid://0torqfsi2wo8" path="res://player.tscn" id="1_lkowe"]
+[ext_resource type="PackedScene" uid="uid://c5bmbibjy6nf7" path="res://npc.tscn" id="2_aaxf5"]
+
+[node name="world" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_lkowe")]
+position = Vector2(249, 350)
+
+[node name="NPC" parent="." instance=ExtResource("2_aaxf5")]
+position = Vector2(626, 360)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Objective:
+"

@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://07ugbrxmb7nr"]
+
+[ext_resource type="Texture2D" uid="uid://dgcx03tf36xvv" path="res://Assets/tiles.png" id="1_rmki2"]
+[ext_resource type="PackedScene" uid="uid://wn2tfo2th3ss" path="res://Scenes/InteractArea.tscn" id="2_lyoom"]
+[ext_resource type="Script" path="res://Scenes/Objects/tree.gd" id="3_7fgwc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbgdk"]
+size = Vector2(16, 16)
+
+[node name="tree" type="StaticBody2D"]
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hbgdk")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_rmki2")
+hframes = 8
+vframes = 15
+frame = 38
+
+[node name="InteractArea" parent="." instance=ExtResource("2_lyoom")]
+scale = Vector2(14.6351, 12.1029)
+script = ExtResource("3_7fgwc")

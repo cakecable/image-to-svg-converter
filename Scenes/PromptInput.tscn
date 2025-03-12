@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=3 uid="uid://cl3pe88eyrurq"]
+
+[ext_resource type="Script" path="res://Scenes/PromptInput.gd" id="1_iwidv"]
+[ext_resource type="FontFile" uid="uid://dals28wyo2mmk" path="res://Assets/PixelifySans-Regular.ttf" id="2_n2rs8"]
+[ext_resource type="Texture2D" uid="uid://d4il2nshk0yr7" path="res://web/Inventory1 (1).png" id="4_1ebeo"]
+[ext_resource type="PackedScene" uid="uid://cjlk5yqsegq7c" path="res://Scenes/UI/HealthBar.tscn" id="5_te6cd"]
+
+[node name="PromptInput" type="CanvasLayer"]
+script = ExtResource("1_iwidv")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.016
+anchor_top = 0.889
+anchor_right = 0.091
+anchor_bottom = 0.972
+offset_left = 342.856
+offset_top = -0.0240021
+offset_right = 343.056
+offset_bottom = 0.0480042
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_n2rs8")
+theme_override_font_sizes/font_size = 7
+text = "ENTER"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+visible = false
+anchors_preset = -1
+anchor_left = 0.091
+anchor_top = 0.889
+anchor_right = 0.323
+anchor_bottom = 0.977
+offset_left = 0.0559998
+offset_top = -0.0240173
+offset_right = -0.0320053
+offset_bottom = -0.0320129
+theme_override_fonts/font = ExtResource("2_n2rs8")
+theme_override_font_sizes/font_size = 7
+placeholder_text = "Type prompt here"
+metadata/_edit_use_anchors_ = true
+
+[node name="HTTPSSEClient" type="Node" parent="."]
+
+[node name="HealthBar" parent="." instance=ExtResource("5_te6cd")]
+offset_left = 6.0
+offset_top = 171.0
+offset_right = 6.0
+offset_bottom = 171.0
+
+[node name="Container" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 6.0
+offset_top = 183.0
+offset_right = 46.0
+offset_bottom = 223.0
+scale = Vector2(0.638306, 0.692938)
+
+[node name="TextureRect" type="TextureRect" parent="Container"]
+layout_mode = 2
+scale = Vector2(0.0442648, 0.0442648)
+texture = ExtResource("4_1ebeo")
+
+[connection signal="pressed" from="Button" to="." method="_on_gd_gpt_pressed"]
