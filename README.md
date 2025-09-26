@@ -48,9 +48,4 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## Acknowledgements
-
-- [Library/Framework 1]
-- [Library/Framework 2]
-
 ```
