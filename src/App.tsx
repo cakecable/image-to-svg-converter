@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Upload, Download, Image as ImageIcon, Code, Loader2 } from 'lucide-react';
+import { Upload, Download, Image as ImageIcon, Code, Loader as Loader2 } from 'lucide-react';
 
 interface ConversionResult {
   svg: string;
