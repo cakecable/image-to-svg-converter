@@ -1,5 +1,12 @@
+
 {
   "dependencies": {
-    "lucide-react": "^0.544.0"
+    "lucide-react": "^0.544.0",
+    "homepage": "https://cakecable.github.io/image-to-svg-converter"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "gh-pages": "^6.3.0"
   }
 }
